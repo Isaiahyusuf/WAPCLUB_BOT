@@ -1,0 +1,17 @@
+# Railway deployment configuration for WAPClub Telegram Bot
+# This file defines the service, environment, and build settings
+
+services:
+  wapclub-bot:
+    build:
+      dockerfile: Dockerfile
+    env:
+      TELEGRAM_TOKEN: $TELEGRAM_TOKEN
+      SOLANA_WALLET: $SOLANA_WALLET
+      FAP_PRICE_API: $FAP_PRICE_API
+      PRICE_CACHE_DURATION: $PRICE_CACHE_DURATION
+      REFERENCE_PREFIX: $REFERENCE_PREFIX
+      SLIPPAGE_TOLERANCE: $SLIPPAGE_TOLERANCE
+      DATABASE_URL: $DATABASE_URL
+    start:
+      command: python main.py
