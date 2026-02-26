@@ -186,6 +186,6 @@ app.add_handler(CallbackQueryHandler(cancel_button, pattern='^cancel$'))
 app.add_handler(CallbackQueryHandler(back_button, pattern='^back$'))
 app.add_handler(MessageHandler(filters.TEXT & filters.ALL, handle_hash))
 
-if __name__ == '__main__':
-    app.run_polling()
+if __name__ == "__main__":
+    main()
 
